@@ -47,7 +47,7 @@ public void draw() {
     background(255);
     textSize(10);
     m.show();
-    if (m.p.lives<=0 || m.score == m.winningscore) {
+    if (m.p.lives<=0 || m.score >= m.winningscore) {
       mode = 3;
     }
     break;
@@ -56,8 +56,10 @@ public void draw() {
     if (m.p.lives<=0) {
       background(0);
       textSize(80);
+      fill(255);
       text("You Lose\nPress enter to try again", CENTER, 80);
     } else {
+      fill(255);
       background(0);
       textSize(80);
       text("You Win\nPress enter to try again", CENTER, 80);

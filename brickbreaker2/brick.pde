@@ -22,6 +22,7 @@ class brick {
     this.hp = hp;
     this.powerup = powerup;
   }
+  
   public void show() {
     if (hp>0) {
       float c = map(hp, 1, 10, 0, 255);
@@ -49,12 +50,15 @@ class brick {
         break;
       case "biggerBall":
         b.show();
+        b.move();
         break;
       case "moreBalls":
         mb.show();
+        mb.move();
         break;
       case "fasterSpeed":
         fs.show();
+        fs.move();
         break;
       }
     }
@@ -75,7 +79,7 @@ class brick {
       testX = posX+w;   // right edge
       side = 1;
     }
-    if (cy < posY) {        
+    if (cy+radius < posY) {        
       testY = posY;      // top edge
       side = 2;
     } else if (cy > posY+h) { 

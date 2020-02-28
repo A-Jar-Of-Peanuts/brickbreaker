@@ -1,12 +1,9 @@
 class powerup extends circle {
-  public int posX, posY;
   public powerup(int posX, int posY) {
-    super(posX, posY, 10, 5, 5);
-    this.posX = posX;
-    this.posY = posY;
+    super(posX, posY, 30, 5, 5);
   }
   public boolean on(int x, int y, int radius) {
-    if (dist(x, y, posX, posY) < radius+5) {
+    if (dist(x, y, posX, posY) < radius+15) {
       return true;
     }
     return false;
@@ -33,11 +30,9 @@ class moreBalls extends powerup {
   public int time = 5;
   public moreBalls(int posX, int posY) {
     super(posX, posY);
-   
   }
   public boolean on(int x, int y, int radius) {
     if (dist(x, y, posX, posY) < radius+5) {
-
       return true;
     }
     return false;
@@ -50,7 +45,6 @@ class moreBalls extends powerup {
 }
 class fasterSpeed extends powerup {
   public int time = 5; 
-  
   public fasterSpeed(int posx, int posY) {
     super(posx, posY);
   }
