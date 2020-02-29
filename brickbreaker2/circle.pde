@@ -17,13 +17,11 @@ class circle{
     ellipse(posX, posY, size, size);
   }
    public void changeSpeedX(int x) {
-    System.out.println("hi");
-    
+    //System.out.println("hi");
     speedx = x;
   }
   public void changeSpeedY(int y) {
-    System.out.println("hello");
-   
+    //System.out.println("hello"); 
     speedy = y;
   }
 }
